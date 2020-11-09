@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import './screens/splash_screen.dart';
 import './routes/app_routes.dart';
-import './screens/login_screen.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Raleway',
       ),
       home: SplashScreen(),
-      routes: {AppRoutes.LOGIN: (context) => LoginScreen()},
+      routes: {AppRoutes.LOGIN: (context) => HomeScreen()},
     );
   }
 }

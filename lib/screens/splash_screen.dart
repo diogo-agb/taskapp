@@ -9,7 +9,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   void initState() {
-    Timer(Duration(seconds: 4), openLogin);
+    Timer(Duration(seconds: 10), openLogin);
     super.initState();
   }
 
@@ -23,15 +23,17 @@ class _SplashScreenState extends State<SplashScreen> {
         appBar.preferredSize.height -
         mediaQuery.padding.top;
 
-    return Scaffold(
-      body: Center(
-        child: Container(
-          width: mediaQuery.size.width * 0.80,
-          height: availableHeight,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.scaleDown,
-              image: AssetImage('assets/images/infographic.png'),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: Container(
+            width: mediaQuery.size.width * 0.80,
+            height: availableHeight,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.scaleDown,
+                image: AssetImage('assets/images/splash_screen.png'),
+              ),
             ),
           ),
         ),
